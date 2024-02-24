@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile</title>
+</head>
+<body>
+    <h1>Student Profile</h1>
+
+    <h2>Student Details:</h2>
+    <p>Name: {{ student.name }}</p>
+    <p>Email: {{ student.email }}</p>
+    <!-- Add other student details as needed -->
+
+    <h2>Booking Status:</h2>
+    <ul>
+        {% for booking in student_bookings %}
+            <li>
+                Booking ID: {{ booking.id }}, Room: {{ booking.room.room_number }}, Booking Date: {{ booking.booking_date }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
